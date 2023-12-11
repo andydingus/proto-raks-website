@@ -3,7 +3,19 @@
 } */
 
 /* Nav styles */
-ul {
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+.nav-bar {
+    flex-grow: 1;
     list-style-type: none;
     margin: 0;
     padding: 0;
