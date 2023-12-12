@@ -1,7 +1,16 @@
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Actor', sans-serif;
+}
+
 h1 {
     font-family: 'Actor', sans-serif;
     font-size: 50px;
     text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
 }
 
 /* Nav styles */
@@ -83,4 +92,29 @@ nav {
     height: 635px;
     background-image: url(imgs/banner.jpg);
     background-repeat: no-repeat;
+    background-size: contain;
+    /* This gives the fixed attribute */
+    background-attachment: fixed;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container a {
+    text-align: center;
+}
+
+/* Images of the scenarios styles */
+.room-scenario {
+    align-self: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .room-scenario {
+        align-self: unset;
+    }
 }
