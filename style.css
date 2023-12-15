@@ -1,3 +1,8 @@
+body {
+    background: black;
+    color: white;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: 'Actor', sans-serif;
 }
@@ -13,9 +18,9 @@ h2 {
     font-size: 40px;
 }
 
-a {
+a, a:visited {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 /* Nav styles */
@@ -51,7 +56,7 @@ nav {
     text-align: center;
     padding: 8px 16px;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 14px;
 }
 
@@ -97,24 +102,40 @@ nav {
 }
 
 /* Banner styles */
-.banner {
-    height: 635px;
+/* .banner { */
+    /* height: 635px;
     background-image: url(imgs/banner.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
     /* This gives the fixed attribute */
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+/* } */
+
+#logo {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Container styles */
 .container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
 .container a {
     text-align: center;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.gap-small {
+    gap: 40px;
 }
 
 /* Images of the scenarios styles */
@@ -126,4 +147,27 @@ nav {
     .room-scenario {
         align-self: unset;
     }
+}
+
+/* Styles of the two images below the scenario images */
+.flexible {
+    max-width: 100%;
+}
+
+.small-size {
+    width: 480px;
+}
+
+/* Specific styles */
+.colored-red {
+    color: #E71A2D;
+}
+
+/* Fake ID selectors, this is for color palettes */
+#colors1 {
+    color: #E71A2D;
+    color: #EBEBEB;
+    color: #565656;
+    color: #919191;
+    color: #333333;
 }
