@@ -37,17 +37,17 @@ a, a:visited {
     color: white;
 }
 
-/* Nav styles */
+/* Desktop nav styles */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: padding 240ms ease;
 }
 
 .hamburger {
     padding: 10px;
     display: none;
+    cursor: pointer;
 }
 
 .small-logo {
@@ -126,6 +126,12 @@ nav {
     display: block;
 }
 
+/* Mobile nav styles */
+.mobile-nav {
+    display: none; /* Default state */
+    background: #000;
+}
+
 /* Banner styles */
 .banner {
     height: 500px;
@@ -161,6 +167,10 @@ nav {
 
 .gap-small {
     gap: 40px;
+}
+
+h2 .scenario-title {
+    color: #f8eaa9;
 }
 
 /* Images of the scenarios styles */
