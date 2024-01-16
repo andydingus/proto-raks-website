@@ -1,6 +1,19 @@
+html {
+    font-size: 1em;
+    
+}
+
+/* Ensures media won't overflow from its container */
+img,
+picture,
+video {
+  max-width: 100%;
+}
+
 body {
     background: black;
     color: white;
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -9,8 +22,9 @@ h1, h2, h3, h4, h5, h6{
 
 h1 {
     font-family: 'Actor', sans-serif;
-    font-size: 50px;
+    font-size: 2rem;
     text-align: center;
+    margin: 0;
 }
 
 h2 {
@@ -28,9 +42,19 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: padding 240ms ease;
 }
 
-.logo img {
+.hamburger {
+    padding: 10px;
+    display: none;
+}
+
+.small-logo {
+    visibility: hidden;
+}
+
+.small-logo img {
     width: 40px;
     height: auto;
 }
@@ -49,6 +73,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding: 20px;
 }
 
 .nav-link a {
@@ -102,14 +127,14 @@ nav {
 }
 
 /* Banner styles */
-/* .banner { */
-    /* height: 635px;
+.banner {
+    height: 500px;
+    /* height: 635px; */
     background-image: url(imgs/banner.jpg);
     background-repeat: no-repeat;
-    background-size: contain; */
-    /* This gives the fixed attribute */
-    /* background-attachment: fixed; */
-/* } */
+    background-size: contain;
+    background-attachment: fixed;
+}
 
 #logo {
     max-width: 100%;
@@ -143,11 +168,34 @@ nav {
     align-self: center;
 }
 
-@media only screen and (max-width: 1200px) {
+/* Media queries */
+/* Make h1 larger at 1200px width */
+@media (min-width: 1200px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+/* Make nav-div disappear when width < 1024px */
+@media (max-width: 1024px) {
+    .nav-div {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+/* @media (min-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+} */
+/* @media only screen and (max-width: 1200px) {
     .room-scenario {
         align-self: unset;
     }
-}
+} */
 
 /* Styles of the two images below the scenario images */
 .flexible {
