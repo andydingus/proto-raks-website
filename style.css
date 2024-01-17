@@ -1,13 +1,13 @@
 html {
     font-size: 1em;
-    
+
 }
 
 /* Ensures media won't overflow from its container */
 img,
 picture,
 video {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 body {
@@ -16,7 +16,12 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Actor', sans-serif;
 }
 
@@ -32,7 +37,8 @@ h2 {
     font-size: 40px;
 }
 
-a, a:visited {
+a,
+a:visited {
     text-decoration: none;
     color: white;
 }
@@ -54,7 +60,8 @@ nav {
     width: 25px;
     height: 3px;
     margin: 5px;
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
 }
 
 .small-logo {
@@ -102,7 +109,7 @@ nav {
 }
 
 /* Dropdown menu styles */
-.nav-link > .dropdown {
+.nav-link>.dropdown {
     text-align: center;
     padding: 8px 16px;
     text-decoration: none;
@@ -135,7 +142,7 @@ nav {
     text-decoration: none;
     display: block;
     width: 125px;
-    
+
 }
 
 /* Dropdown links change color on hover */
@@ -150,7 +157,8 @@ nav {
 
 /* Mobile nav styles */
 .mobile-nav {
-    display: none; /* Default state */
+    display: none;
+    /* Default state */
     background: #000;
 }
 
@@ -204,21 +212,23 @@ h2 .scenario-title {
 /* Make h1 larger at 1200px width */
 @media (min-width: 1200px) {
     h1 {
-      font-size: 4rem;
+        font-size: 4rem;
     }
-  }
+}
 
 /* Make nav-div disappear when width < 1024px */
 @media (max-width: 1024px) {
     nav {
         padding: 20px;
     }
+
     .nav-bar {
         flex-wrap: wrap;
     }
 }
 
 @media (max-width: 768px) {
+
     /* .nav-div {
         display: none;
     } */
@@ -226,10 +236,11 @@ h2 .scenario-title {
         /* Disables horizontal scrolling if allowed */
         overflow-x: hidden;
     }
-    
+
     nav {
         justify-content: space-between;
     }
+
     .empty {
         display: none;
     }
@@ -254,13 +265,14 @@ h2 .scenario-title {
         transition: transform 0.5s ease-in;
     }
 
-    .nav-link {
+    .nav-bar li {
         opacity: 0;
     }
 
     .yesdropdown {
         display: none;
     }
+
     .hamburger {
         display: block;
     }
@@ -271,14 +283,29 @@ h2 .scenario-title {
 }
 
 /* Link animation */
-@keyframes navLinkFade {
+@-webkit-keyframes navLinkFade {
     from {
         opacity: 0;
-        /* transform: translateX(50px); */
-    } to {
-        opacity: 1;
-        /* transform: translateX(0px); */
+        transform: translateX(-50px);
     }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Hamburger animation (toggled using JS) */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
 }
 
 /* @media (min-width: 1024px) {
