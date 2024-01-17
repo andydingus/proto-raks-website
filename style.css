@@ -1,6 +1,5 @@
 html {
     font-size: 1em;
-
 }
 
 /* Ensures media won't overflow from its container */
@@ -86,6 +85,7 @@ nav {
     justify-content: center;
     margin: 0;
     gap: 20px;
+    padding: 0;
     /* gap: 20px;
     padding: 20px; */
     /* overflow: hidden; */
@@ -98,6 +98,14 @@ nav {
     gap: 20px;
     padding: 20px;
 } */
+
+.nav-link a {
+    transition: all 0.3s ease;
+}
+
+.nav-link a:hover {
+    color: gray;
+}
 
 .nav-link a {
     display: block;
@@ -126,9 +134,9 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: black;
     min-width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
     z-index: 1;
 }
 
@@ -137,7 +145,7 @@ nav {
 }
 
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 30px;
     text-decoration: none;
     display: block;
@@ -147,7 +155,7 @@ nav {
 
 /* Dropdown links change color on hover */
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: black;
     z-index: 1;
 }
 
@@ -169,7 +177,8 @@ nav {
     background-image: url(imgs/banner.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-attachment: fixed;
+    margin-bottom: 40px;
+    /* background-attachment: fixed; */
 }
 
 #logo {
@@ -210,14 +219,22 @@ h2 .scenario-title {
 
 /* Media queries */
 /* Make h1 larger at 1200px width */
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
+    .banner {
+        background-size: cover;
+    }
+}
+@media (min-width: 1024px) {
     h1 {
         font-size: 4rem;
     }
 }
 
 /* Make nav-div disappear when width < 1024px */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) { 
+    h1 {
+        font-size: 3rem;
+    }  
     nav {
         padding: 20px;
     }
@@ -225,13 +242,28 @@ h2 .scenario-title {
     .nav-bar {
         flex-wrap: wrap;
     }
+
+    /* All of the nav links */
+    .nav-link a, .nav-link > .dropdown {
+        font-size: 1rem;
+    }
+
+    .banner {
+        height: 400px;
+    }
 }
 
 @media (max-width: 768px) {
-
     /* .nav-div {
         display: none;
     } */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
     body {
         /* Disables horizontal scrolling if allowed */
         overflow-x: hidden;
@@ -253,16 +285,17 @@ h2 .scenario-title {
         position: absolute;
         left: 0px;
         height: 100vh;
-        top: 12vh;
+        top: 10vh;
         background-color: black;
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: center;
-        width: 50%;
+        width: 100%;
+        transition: transform 0.5s ease-in;
         /* Moves the links to the desired position (positive values = moves right, negative values = moves left) */
         transform: translateX(-100%);
-        transition: transform 0.5s ease-in;
+        
     }
 
     .nav-bar li {
@@ -276,10 +309,39 @@ h2 .scenario-title {
     .hamburger {
         display: block;
     }
+
+    .banner {
+        height: 335px;
+    }
 }
+
+@media (max-width: 600px) {
+    .banner {
+        height: 255px;
+    }
+}
+
+@media (max-width: 425px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    .banner {
+        background-image: url(imgs/banner-small.jpg);
+        background-size: cover;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 365px) {
+    .banner {
+        background-size: contain;
+    }
+}
+
 
 .nav-active {
     transform: translateX(0%);
+    overflow-y: hidden;
 }
 
 /* Link animation */
@@ -307,6 +369,8 @@ h2 .scenario-title {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px,-6px);
 }
+
+/* Main styles */
 
 /* @media (min-width: 1024px) {
     .hamburger {
