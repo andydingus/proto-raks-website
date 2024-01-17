@@ -1,7 +1,19 @@
 const hamburger = document.querySelector('.hamburger');
-const mobileNav = document.querySelector('.mobile-nav');
+const nav = document.querySelector('.nav-bar');
+const navLinks = document.querySelectorAll('.nav-link');
 
-hamburger.addEventListener('click', () => {
-    console.log('Clicked hamburger!');
-    mobileNav.style.display = 'flex';
-})
+const navSlide = () => {
+    // Toggle nav event
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+    })
+
+    // Animate the links
+    navLinks.forEach((link, index) => {
+        // Index / 7 allows for a delay for the links to 'pop in'
+        link.style.animation = `navLinkFade 0.5s ease forwads ${index / 7}s`;
+        console.log(index / 7);
+    });
+}
+
+navSlide();
