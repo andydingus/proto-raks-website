@@ -2,6 +2,8 @@ const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav-bar');
 const main = document.querySelector('main');
 const navLinks = document.querySelectorAll('.nav-link');
+const facebookLogo = document.getElementById('facebook');
+const mailLogo = document.getElementById('mail');
 
 const navSlide = () => {
     // Toggle nav event
