@@ -51,6 +51,10 @@ nav {
     min-height: 8vh;
 }
 
+main {
+    padding: 0 40px;
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -215,7 +219,8 @@ h2 .scenario-title {
 
 /* Images of the scenarios styles */
 .room-scenario {
-    align-self: center;
+    padding: 20px 0;
+    
 }
 
 /* Media queries */
@@ -323,6 +328,9 @@ h2 .scenario-title {
 }
 
 @media (max-width: 425px) {
+    main {
+        padding: 0;
+    }
     h2 {
         font-size: 1.5rem;
     }
@@ -379,8 +387,6 @@ h2 .scenario-title {
     transform: rotate(45deg) translate(-5px,-6px);
 }
 
-/* Main styles */
-
 /* @media (min-width: 1024px) {
     .hamburger {
         display: block;
@@ -391,6 +397,21 @@ h2 .scenario-title {
         align-self: unset;
     }
 } */
+
+/* Line break styles */
+.line-break {
+    padding: 20px 0;
+}
+hr {
+    width: 100%;
+    margin: 0 auto;
+    border: solid 1px rgba(255,255,255,0.13);
+}
+
+/* 3rd section styles */
+.center {
+    text-align: center;
+}
 
 /* Styles of the two images below the scenario images */
 .two-images {
