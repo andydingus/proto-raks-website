@@ -34,6 +34,7 @@ h1 {
 h2 {
     text-align: center;
     font-size: 40px;
+    font-weight: 400;
 }
 
 a,
@@ -249,7 +250,7 @@ h2 .scenario-title {
     }
 
     .banner {
-        height: 400px;
+        height: 350px;
     }
 }
 
@@ -311,13 +312,13 @@ h2 .scenario-title {
     }
 
     .banner {
-        height: 335px;
+        height: 260px;
     }
 }
 
 @media (max-width: 600px) {
     .banner {
-        height: 255px;
+        height: 200px;
     }
 }
 
@@ -329,12 +330,19 @@ h2 .scenario-title {
         background-image: url(imgs/banner-small.jpg);
         background-size: cover;
         margin-bottom: 40px;
+        height: 250px;
     }
 }
 
 @media (max-width: 365px) {
     .banner {
         background-size: contain;
+    }
+}
+
+@media (max-width: 320px) {
+    .banner {
+        height: 225px;
     }
 }
 
@@ -345,7 +353,8 @@ h2 .scenario-title {
 }
 
 /* Link animation */
-@-webkit-keyframes navLinkFade {
+
+@keyframes navLinkFade {
     from {
         opacity: 0;
         transform: translateX(-50px);
@@ -384,12 +393,12 @@ h2 .scenario-title {
 } */
 
 /* Styles of the two images below the scenario images */
-.flexible {
-    max-width: 100%;
+.two-images {
+    flex-wrap: wrap;
+    padding: 50px 0;
 }
-
 .small-size {
-    width: 480px;
+    width: 500px;
 }
 
 /* Specific styles */
